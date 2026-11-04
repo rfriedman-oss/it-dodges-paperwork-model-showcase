@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IT Dodges Paperwork</title>
+<style>
+  :root{--ink:#172033;--muted:#5d6b82;--bg:#eef3f8;--panel:#fff;--accent:#0f766e;--accent2:#f59e0b;--danger:#be123c}
+  *{box-sizing:border-box} body{margin:0;background:linear-gradient(160deg,#dbeafe 0%,var(--bg) 55%,#fef3c7 100%);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}
+  main{max-width:980px;margin:auto;padding:22px 16px 34px} header{display:flex;justify-content:space-between;gap:14px;align-items:end;margin-bottom:14px} h1{margin:0;font-size:clamp(1.7rem,4vw,2.7rem);letter-spacing:-.04em} .tag{color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem} .lede{margin:.35rem 0 0;color:var(--muted)}
+  .game-shell{background:rgba(255,255,255,.84);border:1px solid #cbd5e1;border-radius:20px;padding:14px;box-shadow:0 18px 45px rgba(30,41,59,.14)}
+  .hud{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}.stat{background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:7px 11px;font-weight:750}.stat span{color:var(--accent);font-variant-numeric:tabular-nums}.tip{margin-left:auto;color:var(--muted);font-size:.9rem}
+  canvas{display:block;width:100%;height:auto;background:#dff3fb;border:2px solid #1e3a5f;border-radius:14px;image-rendering:auto} .controls{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}.buttons{display:flex;gap:8px;flex-wrap:wrap}button{border:0;border-radius:10px;padding:10px 14px;font:inherit;font-weight:800;cursor:pointer;background:var(--accent);color:white;box-shadow:0 3px 0 #075e58}button:hover{filter:brightness(1.08)}button:active{transform:translateY(2px);box-shadow:none}button.secondary{background:#334155;box-shadow:0 3px 0 #1e293b} .key{display:inline-block;padding:2px 7px;border:1px solid #94a3b8;border-bottom-width:2px;border-radius:5px;background:#fff;font-weight:750;color:#334155}
+  .status{min-height:1.5em;color:var(--muted);font-size:.95rem}.result{margin-top:14px;background:#f8fafc;border-radius:12px;padding:12px;border:1px dashed #94a3b8}.result label{display:block;font-weight:800;margin-bottom:6px}.result-row{display:flex;gap:8px}.result input{min-width:0;flex:1;border:1px solid #94a3b8;border-radius:8px;padding:10px;font:inherit;color:var(--ink);background:#fff}.about{margin-top:18px;color:#475569;font-size:.9rem}.about summary{cursor:pointer;font-weight:800;color:var(--ink)}
+  @media(max-width:620px){header{display:block}.tip{margin-left:0}.result-row{display:block}.result-row button{margin-top:8px;width:100%}}
+</style>
+</head>
+<body>
+<main>
+  <header><div><div class="tag">A tiny office arcade</div><h1>IT Dodges Paperwork</h1><p class="lede">Keep the help desk hero moving. Survive the paper storm for 45 seconds.</p></div></header>
+  <section class="game-shell" aria-label="IT Dodges Paperwork game">
+    <div class="hud"><div class="stat">Time: <span id="time">45.0</span>s</div><div class="stat">Score: <span id="score">0</span></div><div class="stat">Best: <span id="best">0</span></div><div class="tip">Move <span class="key">←</span><span class="key">→</span> · Jump <span class="key">Space</span> · Duck <span class="key">↓</span></div></div>
+    <canvas id="game" width="920" height="420" aria-label="A side scrolling game canvas"></canvas>
+    <div class="controls"><div class="buttons"><button id="start">Start game</button><button id="pause" class="secondary">Pause</button><button id="reset" class="secondary">Reset</button></div><div id="status" class="status" aria-live="polite">Press Start game or Space to begin.</div></div>
+    <div class="result"><label for="results-line">Results line</label><div class="result-row"><input id="results-line" readonly value="Finish a round to generate your result." aria-live="polite"><button id="copy" class="secondary">Copy</button></div></div>
+  </section>
+  <details class="about"><summary>How to play</summary><p>Paperwork arrives from the right. Move with the arrow keys or A/D, jump with Space/W/↑, and duck with S/↓. You can also use the on-screen buttons below the game on a touch device. A collision ends the round; surviving the full timer wins.</p></details>
+</main>
+<script>
+(() => {
+  const c=document.getElementById('game'), x=c.getContext('2d'), W=c.width,H=c.height, ground=340;
+  const ui={time:document.getElementById('time'),score:document.getElementById('score'),best:document.getElementById('best'),status:document.getElementById('status'),start:document.getElementById('start'),pause:document.getElementById('pause'),reset:document.getElementById('reset'),result:document.getElementById('results-line'),copy:document.getElementById('copy')};
+  let best=Number(localStorage.getItem('itPaperBest')||0), raf=0,last=0,elapsed=0,score=0,playing=false,paused=false,over=false,spawn=0,scroll=0;
+  const keys={left:false,right:false,down:false}, p={x:130,y:ground-58,w:36,h:58,vy:0,onGround:true}; let papers=[];
+  ui.best.textContent=best;
+  function reset(){cancelAnimationFrame(raf);elapsed=0;score=0;spawn=.5;scroll=0;papers=[];p.x=130;p.y=ground-p.h;p.vy=0;p.onGround=true;playing=false;paused=false;over=false;ui.time.textContent='45.0';ui.score.textContent='0';ui.status.textContent='Press Start game or Space to begin.';ui.result.value='Finish a round to generate your result.';draw();}
+  function start(){if(over||!playing){if(over) reset(); playing=true;paused=false;over=false;ui.status.textContent='Keep moving — the paperwork is coming!';ui.start.textContent='Restart';last=performance.now();raf=requestAnimationFrame(loop)}else if(paused){paused=false;ui.status.textContent='Back in action!';last=performance.now();raf=requestAnimationFrame(loop)}}
+  function togglePause(){if(!playing||over)return;paused=!paused;if(paused){ui.status.textContent='Paused.';cancelAnimationFrame(raf)}else{ui.status.textContent='Back in action!';last=performance.now();raf=requestAnimationFrame(loop)}}
+  function jump(){if(!playing){start();return}if(p.onGround&&!paused){p.vy=-690;p.onGround=false}}
+  function spawnPaper(){const high=Math.random()<.38;papers.push({x:W+25,y:high?ground-120:ground-48,w:high?54:45,h:high?22:48,v:285+Math.min(elapsed*3,105),rot:(Math.random()-.5)*.2,high});}
+  function hit(a,b){return a.x+4<b.x+b.w-4&&a.x+a.w-4>b.x+4&&a.y+6<b.y+b.h-4&&a.y+a.h-4>b.y+4}
+  function loop(t){if(!playing||paused)return;const dt=Math.min((t-last)/1000,.034);last=t;elapsed+=dt;scroll=(scroll+dt*90)%80;spawn-=dt;if(spawn<=0){spawnPaper();spawn=Math.max(.52,1.08-elapsed*.009)+Math.random()*.36} p.vy+=1750*dt;p.y+=p.vy*dt;if(p.y>=ground-p.h){p.y=ground-p.h;p.vy=0;p.onGround=true} if(keys.left)p.x-=250*dt;if(keys.right)p.x+=250*dt;p.x=Math.max(44,Math.min(300,p.x));const ph=keys.down&&p.onGround?34:58;const box={x:p.x,y:p.y+(58-ph),w:p.w,h:ph};for(const q of papers){q.x-=q.v*dt;q.rot+=dt*1.4}papers= papers.filter(q=>q.x+q.w>-20);score=Math.floor(elapsed*10);ui.score.textContent=score;ui.time.textContent=Math.max(0,45-elapsed).toFixed(1);if(papers.some(q=>hit(box,q))){finish(false);return}if(elapsed>=45){finish(true);return}draw();raf=requestAnimationFrame(loop)}
+  function finish(win){playing=false;over=true;cancelAnimationFrame(raf);if(score>best){best=score;localStorage.setItem('itPaperBest',best);ui.best.textContent=best}const msg=win?'You cleared the paper storm!':'Paperwork got you!';ui.status.textContent=msg+' Press Restart to try again.';ui.result.value=`IT Dodges Paperwork — ${win?'Survived 45 seconds':'Survived '+elapsed.toFixed(1)+' seconds'} — score ${score} — ${win?'WIN':'TRY AGAIN'}`;draw()}
+  function draw(){x.clearRect(0,0,W,H);const sky=x.createLinearGradient(0,0,0,H);sky.addColorStop(0,'#bfe8f3');sky.addColorStop(1,'#f8fafc');x.fillStyle=sky;x.fillRect(0,0,W,H);x.fillStyle='#b5d9b7';x.fillRect(0,ground,W,H-ground);x.fillStyle='#6b8e71';for(let i=-80;i<W+80;i+=80){x.fillRect(i-scroll,ground+14,36,6)};x.fillStyle='#375a70';x.fillRect(44,ground-4,W-88,4);drawOffice();papers.forEach(drawPaper);drawPlayer();if(!playing&&over){x.fillStyle='rgba(15,23,42,.68)';x.fillRect(0,0,W,H);x.fillStyle='#fff';x.textAlign='center';x.font='800 34px system-ui';x.fillText(elapsed>=45?'PAPERWORK DEFEATED!':'PAPERWORK WINS',W/2,170);x.font='600 18px system-ui';x.fillText('Press Restart or Space to play again',W/2,207);x.textAlign='left'}}
+  function drawOffice(){x.fillStyle='#f4d7a1';x.fillRect(0,225,W,115);x.fillStyle='#d69b68';for(let i=0;i<8;i++){x.fillRect(30+i*125,250,90,68);x.fillStyle='#9dc2ce';x.fillRect(43+i*125,264,64,30);x.fillStyle='#d69b68'}x.fillStyle='#f59e0b';x.fillRect(74,130,92,55);x.fillStyle='#172033';x.font='800 22px system-ui';x.fillText('IT',103,165);x.fillStyle='#cbd5e1';x.fillRect(705,85,108,55);x.fillStyle='#0f766e';x.fillRect(717,98,84,8);x.fillRect(717,114,56,8)}
+  function drawPaper(q){x.save();x.translate(q.x+q.w/2,q.y+q.h/2);x.rotate(q.rot);x.fillStyle='#fffdf5';x.strokeStyle='#b45309';x.lineWidth=2;x.fillRect(-q.w/2,-q.h/2,q.w,q.h);x.strokeRect(-q.w/2,-q.h/2,q.w,q.h);x.fillStyle='#d97706';x.fillRect(-q.w/2+7,-q.h/2+7,q.w-14,4);x.fillStyle='#94a3b8';for(let i=0;i<Math.min(3,Math.floor(q.h/12));i++)x.fillRect(-q.w/2+7,-q.h/2+17+i*10,q.w-16,3);x.restore()}
+  function drawPlayer(){const duck=keys.down&&p.onGround,h=duck?34:58,y=p.y+(58-h);x.save();x.translate(p.x,y);x.fillStyle='#0f766e';x.fillRect(8,18,24,h-18);x.fillStyle='#f1b889';x.beginPath();x.arc(20,12,12,0,Math.PI*2);x.fill();x.fillStyle='#172033';x.fillRect(9,1,23,6);x.fillStyle='#f59e0b';x.fillRect(8,h-5,10,5);x.fillRect(23,h-5,10,5);x.fillStyle='#fff';x.fillRect(14,10,3,3);x.fillRect(24,10,3,3);x.restore()}
+  function key(e,on){const k=e.key.toLowerCase();if(['arrowleft','a'].includes(k))keys.left=on;if(['arrowright','d'].includes(k))keys.right=on;if(['arrowdown','s'].includes(k))keys.down=on;if(['arrowup','w',' '].includes(k)&&on){e.preventDefault();jump()}if(k==='p'&&on)togglePause()}window.addEventListener('keydown',e=>key(e,true));window.addEventListener('keyup',e=>key(e,false));
+  ui.start.onclick=start;ui.pause.onclick=togglePause;ui.reset.onclick=reset;ui.copy.onclick=()=>{ui.result.select();navigator.clipboard?.writeText(ui.result.value);ui.status.textContent='Results line copied.'};
+  reset();
+})();
+</script>
+</body>
+</html>
