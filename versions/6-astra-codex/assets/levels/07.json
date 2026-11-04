@@ -1,0 +1,258 @@
+{
+  "index": 7,
+  "chapter": 2,
+  "name": "Thermal Run",
+  "subtitle": "08 / COOLING WORKS",
+  "objective": "Recover two cells and route emergency cooling before reaching the workers.",
+  "lesson": "Coolant surges turn marked floor strips dangerous. Watch the warning, climb to safety, then move during the low cycle.",
+  "challenge": "Resource puzzle: carry cells through timed hazards without the tether.",
+  "briefing": "Ren is holding a manual valve at the far end. The coolant rises in cycles. Cells prevent grappling, so use the elevated landings and wait for a safe interval.",
+  "width": 5400,
+  "spawn": 120,
+  "exit": 5270,
+  "relays": 1,
+  "sockets": 2,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 5400,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 450,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true,
+      "conveyor": 110
+    },
+    {
+      "x": 850,
+      "y": 410,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1370,
+      "y": 500,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1760,
+      "y": 400,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2250,
+      "y": 510,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2670,
+      "y": 410,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3150,
+      "y": 510,
+      "w": 250,
+      "h": 22,
+      "oneWay": true,
+      "conveyor": -110
+    },
+    {
+      "x": 3510,
+      "y": 410,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4050,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4430,
+      "y": 410,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4830,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "flood0",
+      "type": "flood",
+      "x": 1550,
+      "y": 620,
+      "w": 700,
+      "h": 30,
+      "phase": 0
+    },
+    {
+      "id": "flood1",
+      "type": "flood",
+      "x": 3500,
+      "y": 620,
+      "w": 770,
+      "h": 30,
+      "phase": 2
+    },
+    {
+      "id": "cell0",
+      "type": "cell",
+      "x": 720,
+      "y": 620
+    },
+    {
+      "id": "s0",
+      "type": "socket",
+      "x": 2100,
+      "y": 620
+    },
+    {
+      "id": "cell1",
+      "type": "cell",
+      "x": 3800,
+      "y": 620
+    },
+    {
+      "id": "s1",
+      "type": "socket",
+      "x": 5080,
+      "y": 620
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 2790,
+      "y": 410
+    },
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 1170,
+      "y": 620,
+      "value": 110
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 1960,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 2970,
+      "y": 280,
+      "value": 120
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 4130,
+      "y": 620,
+      "value": 130
+    },
+    {
+      "id": "enemy-t1",
+      "type": "turret",
+      "x": 4680,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 1620,
+      "y": 180
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 3390,
+      "y": 190
+    },
+    {
+      "id": "a2",
+      "type": "anchor",
+      "x": 4310,
+      "y": 230
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 2300,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 3900,
+      "y": 620
+    },
+    {
+      "id": "l0",
+      "type": "laser",
+      "x": 2550,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 0.6
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 970,
+      "y": 390,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 3640,
+      "y": 390,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "worker2",
+      "type": "rescue",
+      "x": 5190,
+      "y": 620,
+      "text": "Mechanic Ren: They ordered us to cool the processors with the water from our own breakroom. I kept this valve manual. Some things must remain disobedient."
+    },
+    {
+      "id": "L7",
+      "type": "log",
+      "x": 4550,
+      "y": 410,
+      "text": "The cooling crew left a rhythm scratched into the handrails: three seconds warning, two seconds surge, then a quiet interval. Every safety system became a language the workers had to relearn."
+    }
+  ]
+}

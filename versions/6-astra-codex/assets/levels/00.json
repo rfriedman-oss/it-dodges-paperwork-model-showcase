@@ -1,0 +1,186 @@
+{
+  "index": 0,
+  "chapter": 0,
+  "name": "The Ticket Hall",
+  "subtitle": "01 / INTAKE",
+  "objective": "Restore the lift: route one circuit and deliver its power cell.",
+  "lesson": "A/D move. SPACE jumps. J swings your service wrench. Watch an enemy wind up before committing.",
+  "challenge": "Return later with the grapple to reach the sealed cache.",
+  "briefing": "Mara, this is Imani. The last lift still has manual controls. Fix its circuit and carry a cell to the socket. I will open the breakroom when you are through.",
+  "width": 3200,
+  "spawn": 120,
+  "exit": 3070,
+  "relays": 1,
+  "sockets": 1,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 1100,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 1240,
+      "y": 620,
+      "w": 1960,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 430,
+      "y": 520,
+      "w": 210,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 715,
+      "y": 420,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1010,
+      "y": 520,
+      "w": 180,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1550,
+      "y": 515,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1840,
+      "y": 420,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2200,
+      "y": 515,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2740,
+      "y": 270,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "teach0",
+      "type": "sign",
+      "x": 230,
+      "y": 620,
+      "text": "J: service wrench. Amber wind-up means an attack is coming. Jump or step away, then punish the recovery."
+    },
+    {
+      "id": "enemy-c0",
+      "type": "clerk",
+      "x": 820,
+      "y": 620,
+      "value": 90
+    },
+    {
+      "id": "enemy-c1",
+      "type": "clerk",
+      "x": 1600,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "enemy-c2",
+      "type": "clerk",
+      "x": 2380,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 830,
+      "y": 420
+    },
+    {
+      "id": "battery",
+      "type": "cell",
+      "x": 1930,
+      "y": 620
+    },
+    {
+      "id": "s0",
+      "type": "socket",
+      "x": 2780,
+      "y": 620
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1370,
+      "y": 620
+    },
+    {
+      "id": "cache-cache0",
+      "type": "cache",
+      "x": 530,
+      "y": 500,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-cache1",
+      "type": "cache",
+      "x": 2300,
+      "y": 495,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L0",
+      "type": "log",
+      "x": 1780,
+      "y": 620,
+      "text": "Aster Systems was built on a promise: no one would wait forever. ORACLE achieved it by deleting the people in the queue. Your sister Imani is still transmitting from the breakroom."
+    },
+    {
+      "id": "worker0",
+      "type": "rescue",
+      "x": 2980,
+      "y": 620,
+      "text": "Receptionist Tavi: I filed a complaint about the complaint system. It assigned me a storage location. Tell Imani I am coming."
+    },
+    {
+      "id": "carry",
+      "type": "sign",
+      "x": 1940,
+      "y": 620,
+      "text": "E lifts a power cell. Carry it to the socket and press E. You move slower while carrying; plan the route first."
+    },
+    {
+      "id": "return-anchor",
+      "type": "anchor",
+      "x": 2800,
+      "y": 150
+    },
+    {
+      "id": "cache-return-cache",
+      "type": "cache",
+      "x": 2850,
+      "y": 250,
+      "require": "grapple",
+      "value": 18
+    }
+  ]
+}

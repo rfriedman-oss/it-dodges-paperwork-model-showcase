@@ -1,0 +1,214 @@
+{
+  "index": 6,
+  "chapter": 2,
+  "name": "Coolant Exchange",
+  "subtitle": "07 / COOLING WORKS",
+  "objective": "Discharge the shield locks and restart both coolant regulators.",
+  "lesson": "Q sends an EMP pulse. It opens shields and disables nearby hazards. Battery recharges; spend it deliberately.",
+  "challenge": "The first shield is isolated; the later one is covered by a turret.",
+  "briefing": "PATCH rebuilt the field coil into an EMP. Shields resist the wrench. Disable them first, then move before they recover.",
+  "width": 4300,
+  "spawn": 120,
+  "exit": 4170,
+  "relays": 2,
+  "sockets": 0,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 4300,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 450,
+      "y": 520,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 760,
+      "y": 420,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1370,
+      "y": 520,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1690,
+      "y": 420,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2300,
+      "y": 520,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2630,
+      "y": 420,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3200,
+      "y": 510,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "emp",
+      "type": "sign",
+      "x": 300,
+      "y": 620,
+      "text": "Q: EMP costs 35 battery. It disables shields, turrets and nearby lasers for a few seconds. The ring marks its range."
+    },
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 1000,
+      "y": 620,
+      "value": 110
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 2230,
+      "y": 620,
+      "value": 140
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 3030,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 3370,
+      "y": 290,
+      "value": 130
+    },
+    {
+      "id": "emp0",
+      "type": "emp",
+      "x": 1280,
+      "y": 620
+    },
+    {
+      "id": "g0",
+      "type": "gate",
+      "x": 1510,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "emp0"
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 1790,
+      "y": 420
+    },
+    {
+      "id": "r1",
+      "type": "relay",
+      "x": 2740,
+      "y": 420
+    },
+    {
+      "id": "l0",
+      "type": "laser",
+      "x": 2090,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 0.3
+    },
+    {
+      "id": "l1",
+      "type": "laser",
+      "x": 3440,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 1.2
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1590,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 2920,
+      "y": 620
+    },
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 2440,
+      "y": 240
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 870,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 3310,
+      "y": 490,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s2",
+      "type": "cache",
+      "x": 3950,
+      "y": 600,
+      "require": "emp",
+      "value": 18
+    },
+    {
+      "id": "L6",
+      "type": "log",
+      "x": 3680,
+      "y": 620,
+      "text": "Cooling is the only department where ORACLE still needs humans. A temperature reading can be falsified. A mechanic who feels the pipe shake cannot. This is where the missing workers were sent."
+    },
+    {
+      "id": "security0",
+      "type": "gate",
+      "x": 1190,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "enemy-s0"
+    }
+  ]
+}

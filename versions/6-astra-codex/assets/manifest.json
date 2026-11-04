@@ -1,0 +1,12 @@
+{
+  "project": "Department Zero — The Last Human Ticket",
+  "artProvider": "Built-in ChatGPT image generator",
+  "atlases": [
+    {"file":"art/worlds.png","columns":2,"rows":2,"cells":["Intake","Dead Letters","Cooling Works","Policy Engine"]},
+    {"file":"art/actors.png","columns":4,"rows":4,"transparent":true,"cells":["Mara idle","Mara run A","Mara run B","Mara air","Mara slide","Mara wrench","Clerk","Drone","Shield","Turret","Stamp Warden","Archivist","Compliance Twins","ORACLE","PATCH","Terminal"]},
+    {"file":"art/portraits.png","columns":2,"rows":2,"cells":["Mara","Imani","Alba","PATCH"]}
+  ],
+  "audio":{"format":"16-bit PCM WAV","sampleRate":22050,"effects":19,"ambientLoops":1,"source":["tools/build-sfx.cjs","tools/build-ambience.cjs"]},
+  "levels":12,
+  "prompts":"docs/ART-PROMPTS.md"
+}

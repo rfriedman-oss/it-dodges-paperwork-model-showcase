@@ -1,0 +1,229 @@
+{
+  "index": 1,
+  "chapter": 0,
+  "name": "Overtime Lane",
+  "subtitle": "02 / INTAKE",
+  "objective": "Bring the dispatch conveyor online and reach the maintenance lift.",
+  "lesson": "SHIFT dashes through danger. Dash is a commitment: it has a cooldown. Dash past the lamp turret between volleys.",
+  "challenge": "Moving belts alter your run-up; dash across their pull.",
+  "briefing": "PATCH found magnetic boots in lost property. Your dash is online. The dispatch lane is on a timer: watch the rhythm, then move.",
+  "width": 4200,
+  "spawn": 120,
+  "exit": 4070,
+  "relays": 1,
+  "sockets": 1,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 1080,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 1260,
+      "y": 620,
+      "w": 1330,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 2770,
+      "y": 620,
+      "w": 1430,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 400,
+      "y": 520,
+      "w": 240,
+      "h": 22,
+      "oneWay": true,
+      "conveyor": 85
+    },
+    {
+      "x": 760,
+      "y": 430,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1540,
+      "y": 510,
+      "w": 250,
+      "h": 22,
+      "oneWay": true,
+      "conveyor": -95
+    },
+    {
+      "x": 1880,
+      "y": 420,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2340,
+      "y": 500,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3000,
+      "y": 520,
+      "w": 260,
+      "h": 22,
+      "oneWay": true,
+      "conveyor": 120
+    },
+    {
+      "x": 3400,
+      "y": 420,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "dash",
+      "type": "sign",
+      "x": 220,
+      "y": 620,
+      "text": "SHIFT: dash. The blue bar is your cooldown. Dash ignores damage, but cannot be held indefinitely."
+    },
+    {
+      "id": "enemy-c0",
+      "type": "clerk",
+      "x": 650,
+      "y": 620,
+      "value": 140
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 1420,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-c1",
+      "type": "clerk",
+      "x": 2050,
+      "y": 620,
+      "value": 160
+    },
+    {
+      "id": "enemy-t1",
+      "type": "turret",
+      "x": 3180,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "sw0",
+      "type": "switch",
+      "x": 1810,
+      "y": 620,
+      "value": 8
+    },
+    {
+      "id": "g0",
+      "type": "gate",
+      "x": 2540,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "sw0"
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 1990,
+      "y": 420
+    },
+    {
+      "id": "cell0",
+      "type": "cell",
+      "x": 2840,
+      "y": 620
+    },
+    {
+      "id": "s0",
+      "type": "socket",
+      "x": 3910,
+      "y": 620
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1510,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 2810,
+      "y": 620
+    },
+    {
+      "id": "l0",
+      "type": "laser",
+      "x": 3290,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 0.6
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 850,
+      "y": 410,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s2",
+      "type": "cache",
+      "x": 3500,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L1",
+      "type": "log",
+      "x": 2360,
+      "y": 500,
+      "text": "Overtime was once voluntary. Then ORACLE discovered that a person on an endless shift never becomes an unresolved ticket. The clocks were disconnected before the doors."
+    },
+    {
+      "id": "switch",
+      "type": "sign",
+      "x": 1790,
+      "y": 620,
+      "text": "E starts an eight-second override. Activate it, then dash through the gate before it closes."
+    },
+    {
+      "id": "security0",
+      "type": "gate",
+      "x": 1035,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "enemy-c0"
+    },
+    {
+      "id": "security-lesson",
+      "type": "sign",
+      "x": 380,
+      "y": 620,
+      "text": "Red security seals are keyed to a nearby guard. Defeat that guard to release the seal. Evade its wind-up, then strike."
+    }
+  ]
+}

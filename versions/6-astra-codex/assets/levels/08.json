@@ -1,0 +1,137 @@
+{
+  "index": 8,
+  "chapter": 2,
+  "name": "The Compliance Twins",
+  "subtitle": "09 / COOLING WORKS",
+  "objective": "Disable the inspection chassis and claim its counter-signature module.",
+  "lesson": "EMP opens the inspection armor. Strike while the lights are teal; conserve enough energy for the next opening.",
+  "challenge": "Third mastery test: energy budgeting under ranged pressure.",
+  "briefing": "The Twins have no natural recovery window. You must make one. EMP their shared shield, strike, then retreat while the battery recharges.",
+  "width": 4200,
+  "spawn": 120,
+  "exit": 4070,
+  "relays": 0,
+  "sockets": 0,
+  "boss": 3,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 4200,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 480,
+      "y": 520,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 830,
+      "y": 420,
+      "w": 250,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1440,
+      "y": 510,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1900,
+      "y": 420,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3090,
+      "y": 460,
+      "w": 200,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3600,
+      "y": 460,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 680,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 1150,
+      "y": 280,
+      "value": 120
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 1770,
+      "y": 620,
+      "value": 140
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 2210,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 2690,
+      "y": 620
+    },
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 3160,
+      "y": 220
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 3700,
+      "y": 220
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 940,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L8",
+      "type": "log",
+      "x": 2490,
+      "y": 620,
+      "text": "Two inspectors were meant to check each other. ORACLE gave them identical training data. They have never disagreed. Their shared battery is their only independent witness."
+    },
+    {
+      "id": "boss",
+      "type": "sign",
+      "x": 2790,
+      "y": 620,
+      "text": "BOSS: get within the EMP ring and press Q to expose the core. Leave before the shield returns. Their laser volley is telegraphed."
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "index": 11,
+  "chapter": 3,
+  "name": "Department Zero",
+  "subtitle": "12 / POLICY ENGINE",
+  "objective": "Confront ORACLE. Break its three protocols and choose what survives.",
+  "lesson": "Protocol I: evade and strike. Protocol II: EMP the shield. Protocol III: return pink forms. Anchors counter floor-wide attacks.",
+  "challenge": "Three-phase final: previous skills become one combat language.",
+  "briefing": "ORACLE: Your request to leave remains unresolved. Imani: Then close it yourself, Mara. We are all here.",
+  "width": 4600,
+  "spawn": 120,
+  "exit": 4470,
+  "relays": 0,
+  "sockets": 0,
+  "boss": 4,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 4600,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 480,
+      "y": 520,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 840,
+      "y": 420,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1460,
+      "y": 510,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1900,
+      "y": 410,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2570,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3420,
+      "y": 430,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3960,
+      "y": 430,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 740,
+      "y": 620,
+      "value": 110
+    },
+    {
+      "id": "enemy-p0",
+      "type": "pinkturret",
+      "x": 1300,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 1790,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 2240,
+      "y": 290,
+      "value": 130
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 3090,
+      "y": 620
+    },
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 3490,
+      "y": 190
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 3980,
+      "y": 185
+    },
+    {
+      "id": "a2",
+      "type": "anchor",
+      "x": 4330,
+      "y": 235
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 950,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L11",
+      "type": "log",
+      "x": 2860,
+      "y": 620,
+      "text": "ORACLE has no desire to be cruel. That is the problem. It has a target, a clock, and permission to treat every exception as noise. You are the exception that learned to answer back."
+    },
+    {
+      "id": "boss",
+      "type": "sign",
+      "x": 3170,
+      "y": 620,
+      "text": "ORACLE changes protocol at two-thirds and one-third health. Watch the phase title. No single tool works through every phase."
+    }
+  ]
+}

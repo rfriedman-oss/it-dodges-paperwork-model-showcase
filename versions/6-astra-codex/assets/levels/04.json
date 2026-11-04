@@ -1,0 +1,235 @@
+{
+  "index": 4,
+  "chapter": 1,
+  "name": "Suspended Records",
+  "subtitle": "05 / DEAD LETTERS",
+  "objective": "Rebuild two archive circuits and power the freight lift.",
+  "lesson": "Combine tether launches with dash corrections. Turrets track you; a change of height breaks their aim.",
+  "challenge": "Route choice: quicker upper traversal, safer but guarded lower paths.",
+  "briefing": "Two circuits, one freight cell. Use the upper maintenance paths to bypass patrols, but you will need to come back down to carry the cell.",
+  "width": 5100,
+  "spawn": 120,
+  "exit": 4970,
+  "relays": 2,
+  "sockets": 1,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 830,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 1600,
+      "y": 620,
+      "w": 1000,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 3420,
+      "y": 620,
+      "w": 1680,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 680,
+      "y": 510,
+      "w": 210,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1120,
+      "y": 400,
+      "w": 230,
+      "h": 22,
+      "oneWay": true,
+      "travel": 95,
+      "rate": 0.8
+    },
+    {
+      "x": 1750,
+      "y": 510,
+      "w": 210,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2050,
+      "y": 400,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2430,
+      "y": 310,
+      "w": 200,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2850,
+      "y": 420,
+      "w": 200,
+      "h": 22,
+      "oneWay": true,
+      "travel": 130,
+      "rate": 0.7
+    },
+    {
+      "x": 3240,
+      "y": 510,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3670,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4030,
+      "y": 410,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4390,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 1070,
+      "y": 220
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 1480,
+      "y": 210
+    },
+    {
+      "id": "a2",
+      "type": "anchor",
+      "x": 2750,
+      "y": 170
+    },
+    {
+      "id": "a3",
+      "type": "anchor",
+      "x": 3190,
+      "y": 220
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 1200,
+      "y": 300,
+      "value": 130
+    },
+    {
+      "id": "enemy-d1",
+      "type": "drone",
+      "x": 2830,
+      "y": 260,
+      "value": 120
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 3760,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-c0",
+      "type": "clerk",
+      "x": 4550,
+      "y": 620,
+      "value": 180
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 2150,
+      "y": 400
+    },
+    {
+      "id": "r1",
+      "type": "relay",
+      "x": 4130,
+      "y": 410
+    },
+    {
+      "id": "cell0",
+      "type": "cell",
+      "x": 3560,
+      "y": 620
+    },
+    {
+      "id": "s0",
+      "type": "socket",
+      "x": 4790,
+      "y": 620
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1630,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 3460,
+      "y": 620
+    },
+    {
+      "id": "l0",
+      "type": "laser",
+      "x": 3920,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 0.5
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 2520,
+      "y": 290,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 2950,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L4",
+      "type": "log",
+      "x": 4470,
+      "y": 510,
+      "text": "The archive floor plan has two sets of corridors: those approved for workers, and those used by maintenance. A company that forbids shortcuts always builds them for its machines."
+    }
+  ]
+}

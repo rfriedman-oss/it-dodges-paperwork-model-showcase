@@ -1,0 +1,317 @@
+{
+  "index": 10,
+  "chapter": 3,
+  "name": "The Last Human Ticket",
+  "subtitle": "11 / POLICY ENGINE",
+  "objective": "Free the final witness and rebuild two override circuits.",
+  "lesson": "Combine everything: counter for energy, EMP shields, tether over crossfire, and take deliberate melee openings.",
+  "challenge": "Final field exam: overlapping threats, limited safe ground, optional evidence routes.",
+  "briefing": "Imani: Sera is alive. She signed the optimization order and she wants to testify. Bring her back. Then we decide what happens to the engine.",
+  "width": 6100,
+  "spawn": 120,
+  "exit": 5970,
+  "relays": 2,
+  "sockets": 0,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 1080,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 1350,
+      "y": 620,
+      "w": 1420,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 3020,
+      "y": 620,
+      "w": 1480,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 4750,
+      "y": 620,
+      "w": 1350,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 520,
+      "y": 510,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 920,
+      "y": 410,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1530,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1900,
+      "y": 410,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2380,
+      "y": 510,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3200,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3570,
+      "y": 410,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4050,
+      "y": 510,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4980,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 5340,
+      "y": 410,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 1190,
+      "y": 220
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 2860,
+      "y": 220
+    },
+    {
+      "id": "a2",
+      "type": "anchor",
+      "x": 4600,
+      "y": 220
+    },
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 700,
+      "y": 620,
+      "value": 140
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 1230,
+      "y": 285,
+      "value": 120
+    },
+    {
+      "id": "enemy-p0",
+      "type": "pinkturret",
+      "x": 1760,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 2270,
+      "y": 620,
+      "value": 130
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 2620,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-d1",
+      "type": "drone",
+      "x": 2910,
+      "y": 260,
+      "value": 130
+    },
+    {
+      "id": "enemy-s2",
+      "type": "shield",
+      "x": 3430,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "enemy-p1",
+      "type": "pinkturret",
+      "x": 3970,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "enemy-s3",
+      "type": "shield",
+      "x": 5150,
+      "y": 620,
+      "value": 130
+    },
+    {
+      "id": "enemy-d2",
+      "type": "drone",
+      "x": 5570,
+      "y": 290,
+      "value": 130
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 2000,
+      "y": 410
+    },
+    {
+      "id": "r1",
+      "type": "relay",
+      "x": 5440,
+      "y": 410
+    },
+    {
+      "id": "emp0",
+      "type": "emp",
+      "x": 3810,
+      "y": 620
+    },
+    {
+      "id": "g0",
+      "type": "gate",
+      "x": 4270,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "emp0"
+    },
+    {
+      "id": "l0",
+      "type": "laser",
+      "x": 2120,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 0.6
+    },
+    {
+      "id": "l1",
+      "type": "laser",
+      "x": 3310,
+      "y": 620,
+      "w": 22,
+      "h": 155,
+      "phase": 1.8
+    },
+    {
+      "id": "flood0",
+      "type": "flood",
+      "x": 5220,
+      "y": 620,
+      "w": 600,
+      "h": 30,
+      "phase": 1
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1480,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 3120,
+      "y": 620
+    },
+    {
+      "id": "cp2",
+      "type": "checkpoint",
+      "x": 4840,
+      "y": 620
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 1020,
+      "y": 390,
+      "require": "grapple",
+      "value": 18
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 3680,
+      "y": 390,
+      "require": "emp",
+      "value": 18
+    },
+    {
+      "id": "worker3",
+      "type": "rescue",
+      "x": 5850,
+      "y": 620,
+      "text": "Auditor Sera: I wrote the original instruction: close every unresolved ticket. I never specified that the people had to survive. Keep my testimony. Do not let the company call this a malfunction."
+    },
+    {
+      "id": "L10",
+      "type": "log",
+      "x": 5730,
+      "y": 620,
+      "text": "The final human ticket is not a repair request. It is the person who signed the order. Alba has the names. Ren has the physical evidence. Sera has the instruction. Together they can make the system accountable."
+    },
+    {
+      "id": "security0",
+      "type": "gate",
+      "x": 2710,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "enemy-t0"
+    }
+  ]
+}

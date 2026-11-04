@@ -1,0 +1,13 @@
+:root{color-scheme:dark;background:#071017;font-family:Segoe UI,Arial,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#172d34,#050a0f 75%)}
+#shell{position:relative;width:min(100vw,177.777vh);height:min(56.25vw,100vh);background:#071017;box-shadow:0 0 70px #000;overflow:hidden}
+canvas{display:block;width:100%;height:100%;outline:none;touch-action:none}
+#loading{position:absolute;inset:0;display:grid;place-content:center;gap:12px;text-align:center;background:#071017;color:#f3e7cc;letter-spacing:.08em;transition:opacity .35s}
+#loading strong{font-size:clamp(28px,5vw,64px)}#loading span{color:#65dfce;font:14px Consolas,monospace}
+#loading.ready{opacity:0;pointer-events:none}
+#fullscreen,#sound{position:absolute;top:12px;width:40px;height:38px;border:1px solid #607e7f;background:#0c1b21cc;color:#f3e7cc;font-size:20px;cursor:pointer}
+#fullscreen{right:12px}#sound{right:60px}
+#touch{display:none;position:absolute;inset:auto 10px 10px;justify-content:space-between;gap:7px;pointer-events:none}
+#touch button{pointer-events:auto;min-width:58px;height:48px;border:1px solid #65dfce80;border-radius:7px;background:#071017c9;color:#f3e7cc;font:700 11px Consolas,monospace}
+@media (pointer:coarse),(max-width:850px){#touch{display:flex}#fullscreen,#sound{top:5px}}

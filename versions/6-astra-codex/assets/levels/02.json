@@ -1,0 +1,119 @@
+{
+  "index": 2,
+  "chapter": 0,
+  "name": "The Stamp Warden",
+  "subtitle": "03 / INTAKE",
+  "objective": "Defeat the Warden to recover the magnetic tether.",
+  "lesson": "The Warden raises its stamp before a charge. Dash through it, then strike during its long recovery.",
+  "challenge": "First mastery test: read, evade, punish.",
+  "briefing": "The Warden has the only tether key. Its stamp arm takes time to reset. Do not trade blows. Make it miss.",
+  "width": 3600,
+  "spawn": 120,
+  "exit": 3470,
+  "relays": 0,
+  "sockets": 0,
+  "boss": 1,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 3600,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 500,
+      "y": 520,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 880,
+      "y": 420,
+      "w": 220,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1400,
+      "y": 510,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2450,
+      "y": 500,
+      "w": 200,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2940,
+      "y": 420,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "enemy-c0",
+      "type": "clerk",
+      "x": 650,
+      "y": 620,
+      "value": 110
+    },
+    {
+      "id": "enemy-c1",
+      "type": "clerk",
+      "x": 1300,
+      "y": 620,
+      "value": 150
+    },
+    {
+      "id": "enemy-t0",
+      "type": "turret",
+      "x": 1760,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 2110,
+      "y": 620
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 980,
+      "y": 400,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 1500,
+      "y": 490,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L2",
+      "type": "log",
+      "x": 1920,
+      "y": 620,
+      "text": "The Warden was a desk-sized approval stamp. Every rejected request made it heavier. Now it weighs more than the floor it guards. Its manual release is behind the red ink core."
+    },
+    {
+      "id": "boss",
+      "type": "sign",
+      "x": 2180,
+      "y": 620,
+      "text": "BOSS: a red ground strip previews its charge. Dash through, then hit J while the core is exposed."
+    }
+  ]
+}

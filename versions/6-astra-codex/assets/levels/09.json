@@ -1,0 +1,222 @@
+{
+  "index": 9,
+  "chapter": 3,
+  "name": "Executive Exceptions",
+  "subtitle": "10 / POLICY ENGINE",
+  "objective": "Counter-sign the policy gates and recover the final access circuit.",
+  "lesson": "The first fraction of a SHIFT dash counters pink forms. A late dash only dodges. Successful counters refill battery.",
+  "challenge": "Practice the narrow timing window, then apply it with other enemies nearby.",
+  "briefing": "The counter-signature module is live. Return a pink form to its sender to open the seals. The first emitter is isolated so you can learn the timing.",
+  "width": 4800,
+  "spawn": 120,
+  "exit": 4670,
+  "relays": 1,
+  "sockets": 0,
+  "boss": 0,
+  "platforms": [
+    {
+      "x": 0,
+      "y": 620,
+      "w": 1200,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 1390,
+      "y": 620,
+      "w": 1610,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 3190,
+      "y": 620,
+      "w": 1610,
+      "h": 160,
+      "oneWay": false
+    },
+    {
+      "x": 500,
+      "y": 520,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 860,
+      "y": 420,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1600,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 1970,
+      "y": 410,
+      "w": 230,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 2510,
+      "y": 510,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3380,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 3730,
+      "y": 410,
+      "w": 260,
+      "h": 22,
+      "oneWay": true
+    },
+    {
+      "x": 4190,
+      "y": 510,
+      "w": 240,
+      "h": 22,
+      "oneWay": true
+    }
+  ],
+  "things": [
+    {
+      "id": "enemy-p0",
+      "type": "pinkturret",
+      "x": 990,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "counter0",
+      "type": "counter",
+      "x": 1170,
+      "y": 580
+    },
+    {
+      "id": "g0",
+      "type": "gate",
+      "x": 1530,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "counter0"
+    },
+    {
+      "id": "enemy-s0",
+      "type": "shield",
+      "x": 1860,
+      "y": 620,
+      "value": 120
+    },
+    {
+      "id": "enemy-p1",
+      "type": "pinkturret",
+      "x": 2810,
+      "y": 620,
+      "value": 100
+    },
+    {
+      "id": "counter1",
+      "type": "counter",
+      "x": 2980,
+      "y": 580
+    },
+    {
+      "id": "g1",
+      "type": "gate",
+      "x": 3290,
+      "y": 620,
+      "w": 24,
+      "h": 370,
+      "link": "counter1"
+    },
+    {
+      "id": "enemy-d0",
+      "type": "drone",
+      "x": 3530,
+      "y": 290,
+      "value": 110
+    },
+    {
+      "id": "enemy-s1",
+      "type": "shield",
+      "x": 4160,
+      "y": 620,
+      "value": 150
+    },
+    {
+      "id": "r0",
+      "type": "relay",
+      "x": 3840,
+      "y": 410
+    },
+    {
+      "id": "cp0",
+      "type": "checkpoint",
+      "x": 1630,
+      "y": 620
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 3370,
+      "y": 620
+    },
+    {
+      "id": "a0",
+      "type": "anchor",
+      "x": 1260,
+      "y": 220
+    },
+    {
+      "id": "a1",
+      "type": "anchor",
+      "x": 3060,
+      "y": 220
+    },
+    {
+      "id": "cache-s0",
+      "type": "cache",
+      "x": 2080,
+      "y": 390,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "cache-s1",
+      "type": "cache",
+      "x": 4300,
+      "y": 490,
+      "require": "",
+      "value": 7
+    },
+    {
+      "id": "L9",
+      "type": "log",
+      "x": 4470,
+      "y": 620,
+      "text": "A policy exception is a request signed by someone with more authority. The counter-signature module borrows ORACLEs own handwriting. For once, the machine must obey its paperwork."
+    },
+    {
+      "id": "parry",
+      "type": "sign",
+      "x": 480,
+      "y": 620,
+      "text": "Pink forms: tap SHIFT just before impact. The bright first 0.18 seconds counter-sign them. Returned forms unlock the nearby pink seal."
+    }
+  ]
+}

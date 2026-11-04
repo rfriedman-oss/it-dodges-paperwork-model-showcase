@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071017">
+  <meta name="description" content="Department Zero: The Last Human Ticket — a browser-playable industrial fantasy action adventure.">
+  <link rel="icon" href="assets/icon.ico">
+  <title>Department Zero — The Last Human Ticket</title>
+  <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+  <main id="shell">
+    <canvas id="game" width="1280" height="720" aria-label="Department Zero game canvas" tabindex="0"></canvas>
+    <section id="loading" aria-live="polite"><strong>DEPARTMENT ZERO</strong><span>Loading the building beneath the building…</span></section>
+    <button id="fullscreen" type="button" aria-label="Toggle fullscreen">⛶</button>
+    <button id="sound" type="button" aria-label="Toggle sound">♪</button>
+    <div id="touch" aria-label="Touch controls">
+      <button data-key="ArrowLeft">◀</button><button data-key="ArrowRight">▶</button>
+      <button data-key="Space">JUMP</button><button data-key="KeyJ">HIT</button>
+      <button data-key="ShiftLeft">DASH</button><button data-key="KeyE">USE</button>
+    </div>
+  </main>
+  <noscript>This game requires JavaScript.</noscript>
+  <script src="web/game.js"></script>
+</body>
+</html>

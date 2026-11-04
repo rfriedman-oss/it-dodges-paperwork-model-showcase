@@ -1,0 +1,95 @@
+{
+  "title": "Department Zero",
+  "chapters": [
+    "Intake",
+    "Dead Letters",
+    "Cooling Works",
+    "Policy Engine"
+  ],
+  "levels": [
+    {
+      "index": 0,
+      "name": "The Ticket Hall",
+      "chapter": 0,
+      "lesson": "A/D move. SPACE jumps. J swings your service wrench. Watch an enemy wind up before committing.",
+      "challenge": "Return later with the grapple to reach the sealed cache."
+    },
+    {
+      "index": 1,
+      "name": "Overtime Lane",
+      "chapter": 0,
+      "lesson": "SHIFT dashes through danger. Dash is a commitment: it has a cooldown. Dash past the lamp turret between volleys.",
+      "challenge": "Moving belts alter your run-up; dash across their pull."
+    },
+    {
+      "index": 2,
+      "name": "The Stamp Warden",
+      "chapter": 0,
+      "lesson": "The Warden raises its stamp before a charge. Dash through it, then strike during its long recovery.",
+      "challenge": "First mastery test: read, evade, punish."
+    },
+    {
+      "index": 3,
+      "name": "Dead Letter Junction",
+      "chapter": 1,
+      "lesson": "Hold F near an amber anchor to grapple. Release F to launch away. You cannot tether while carrying a cell.",
+      "challenge": "The first gap is safe to retry; the second combines anchors and a moving landing."
+    },
+    {
+      "index": 4,
+      "name": "Suspended Records",
+      "chapter": 1,
+      "lesson": "Combine tether launches with dash corrections. Turrets track you; a change of height breaks their aim.",
+      "challenge": "Route choice: quicker upper traversal, safer but guarded lower paths."
+    },
+    {
+      "index": 5,
+      "name": "The Archivist",
+      "chapter": 1,
+      "lesson": "A rising wave covers the floor. Grapple above it, land near the exposed book core, and strike.",
+      "challenge": "Second mastery test: vertical escape, controlled landing, attack timing."
+    },
+    {
+      "index": 6,
+      "name": "Coolant Exchange",
+      "chapter": 2,
+      "lesson": "Q sends an EMP pulse. It opens shields and disables nearby hazards. Battery recharges; spend it deliberately.",
+      "challenge": "The first shield is isolated; the later one is covered by a turret."
+    },
+    {
+      "index": 7,
+      "name": "Thermal Run",
+      "chapter": 2,
+      "lesson": "Coolant surges turn marked floor strips dangerous. Watch the warning, climb to safety, then move during the low cycle.",
+      "challenge": "Resource puzzle: carry cells through timed hazards without the tether."
+    },
+    {
+      "index": 8,
+      "name": "The Compliance Twins",
+      "chapter": 2,
+      "lesson": "EMP opens the inspection armor. Strike while the lights are teal; conserve enough energy for the next opening.",
+      "challenge": "Third mastery test: energy budgeting under ranged pressure."
+    },
+    {
+      "index": 9,
+      "name": "Executive Exceptions",
+      "chapter": 3,
+      "lesson": "The first fraction of a SHIFT dash counters pink forms. A late dash only dodges. Successful counters refill battery.",
+      "challenge": "Practice the narrow timing window, then apply it with other enemies nearby."
+    },
+    {
+      "index": 10,
+      "name": "The Last Human Ticket",
+      "chapter": 3,
+      "lesson": "Combine everything: counter for energy, EMP shields, tether over crossfire, and take deliberate melee openings.",
+      "challenge": "Final field exam: overlapping threats, limited safe ground, optional evidence routes."
+    },
+    {
+      "index": 11,
+      "name": "Department Zero",
+      "chapter": 3,
+      "lesson": "Protocol I: evade and strike. Protocol II: EMP the shield. Protocol III: return pink forms. Anchors counter floor-wide attacks.",
+      "challenge": "Three-phase final: previous skills become one combat language."
+    }
+  ]
+}
